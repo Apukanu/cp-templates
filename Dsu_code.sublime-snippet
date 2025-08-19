@@ -1,5 +1,4 @@
-<snippet>
-	<content><![CDATA[
+
 struct dsu {
     vector<int> nodes;
     int component;
@@ -99,9 +98,4 @@ struct dsu {
     }
     //dsu d(n);
 };
-]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	 <tabTrigger>dsu_kor</tabTrigger> 
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>source.c++</scope> 
-</snippet>
+
