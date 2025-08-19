@@ -1,0 +1,15 @@
+int dp[20][2][4];// length, flag, cnt
+int solve(string s, int idx, int flag, int cnt)
+{
+	if (idx == sz(s))return 1;
+	if (dp[idx][flag][cnt] != -1)return dp[idx][flag][cnt];
+	int limit = 9;
+	if (flag)limit = s[idx] - '0';
+	int ans = 0;
+	for (int i = 0; i <= limit; ++i)
+	{
+		int ud = cnt + (i > 0);
+		if (ud <= 3)ans += solve(s, idx + 1, flag & (i == s[idx] - '0'), ud);
+	}
+	return dp[idx][flag][cnt] = ans;
+}
